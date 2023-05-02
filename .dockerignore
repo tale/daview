@@ -1,0 +1,11 @@
+dist/
+node_modules/
+.dockerignore
+.env
+.eslintrc
+.gitignore
+Dockerfile
+LICENSE
+README.md
+Taskfile.yaml
+
