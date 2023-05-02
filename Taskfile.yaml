@@ -6,4 +6,4 @@ tasks:
     dotenv:
       - .env
     cmds:
-      - cmd: pnpm run dev
+      - cmd: pnpm run dev --host
