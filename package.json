@@ -1,33 +1,35 @@
 {
-  "name": "-TODO-",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "rakkas",
-    "build": "rakkas build",
-    "start": "node dist/server",
-    "test": "pnpm test:typecheck && pnpm test:lint",
-    "test:typecheck": "tsc -p tsconfig.json --noEmit",
-    "test:lint": "eslint . --ignore-pattern dist"
-  },
-  "devDependencies": {
-    "@types/node": "^18.16.3",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.1",
-    "autoprefixer": "^10.4.14",
-    "cssnano": "^6.0.1",
-    "eslint": "^8.39.0",
-    "eslint-config-tale": "^1.0.16",
-    "postcss": "^8.4.23",
-    "rakkasjs": "0.6.20",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.4",
-    "vite-tsconfig-paths": "^4.2.0"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "webdav": "5.0.0-r3"
-  }
+	"name": "daview",
+	"version": "0.9.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "rakkas",
+		"build": "rakkas build",
+		"start": "node dist/server",
+		"test": "pnpm test:typecheck && pnpm test:lint",
+		"test:typecheck": "tsc -p tsconfig.json --noEmit",
+		"test:lint": "eslint . --ignore-pattern dist"
+	},
+	"devDependencies": {
+		"@types/node": "^18.16.3",
+		"@types/react": "^18.2.0",
+		"@types/react-dom": "^18.2.1",
+		"autoprefixer": "^10.4.14",
+		"cssnano": "^6.0.1",
+		"eslint": "^8.39.0",
+		"eslint-config-tale": "^1.0.16",
+		"np": "^7.7.0",
+		"postcss": "^8.4.23",
+		"rakkasjs": "0.6.20",
+		"tailwindcss": "^3.3.2",
+		"typescript": "^5.0.4",
+		"vite": "^4.3.4",
+		"vite-tsconfig-paths": "^4.2.0"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"webdav": "5.0.0-r3"
+	}
 }

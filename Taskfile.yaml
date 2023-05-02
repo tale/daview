@@ -7,3 +7,10 @@ tasks:
       - .env
     cmds:
       - cmd: pnpm run dev --host
+  build:
+    desc: 'Builds and publishes the production Docker image'
+    cmds:
+      - cmd: "pnpm np --no-cleanup --no-tests --no-publish --no-release-draft --yolo --message 'chore: v%s'"
+      - cmd: docker buildx create --name daview-builder --use
+      - defer: docker buildx rm daview-builder
+      - cmd: docker buildx build --platform linux/amd64 --platform linux/arm64 -t tale.me/library/daview:latest -t tale.me/library/daview:$(git tag --sort=-v:refname | cut -c 2- | head -n 1) --push --build-arg BUILD_DATE=$(date --rfc-3339=date) --build-arg VERSION=$(git tag --sort=-v:refname | cut -c 2- | head -n 1) --build-arg GIT_STATE=$(git rev-parse HEAD) .
