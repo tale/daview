@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  dev:
+    desc: 'Run the project locally'
+    dotenv:
+      - .env
+    cmds:
+      - cmd: pnpm run dev
