@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=build /app/package.json /app/package.json
+COPY --from=builder /app/package.json /app/package.json
 CMD ["dist/server/index.js"]
 
 EXPOSE 3000
