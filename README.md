@@ -25,4 +25,20 @@ Please keep in mind that `PROXY_LOGIN` is the credentials for the WebDAV interfa
 *They do not need to be actual users on your WebDAV instance.*
 *All authentication to the WebDAV instance is done through the `PROXY_LOGIN` credentials!*
 
+### Kubernetes
+If you plan to deploy this on Kubernetes like I've done, then reference the files in the `k8s/` directory.<br>
+You'll need to create your own secret with all the values so that they can be mounted as environment variables.
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: daview-env
+type: Opaque
+stringData:
+  PROXY_ENDPOINT: 'https://my-webdav.acme.com'
+  PROXY_LOGIN: 'dav_user:dav_password'
+  PROXY_USERS: 'user1:pass1,user2:pass2'
+  PROXY_SECRET: 'my_secret_cookie_encryption_value'
+```
+
 > Copyright (c) 2023 Aarnav Tale
