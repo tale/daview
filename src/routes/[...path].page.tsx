@@ -1,6 +1,6 @@
 import 'src/index.css'
 
-import { type PageProps, useServerSideQuery } from 'rakkasjs'
+import { Head, type PageProps, useServerSideQuery } from 'rakkasjs'
 import { Suspense } from 'react'
 import { read } from 'src/client'
 
@@ -25,6 +25,7 @@ export default function Page({ params }: PageProps) {
 
 	return (
 		<>
+			<Head title={`Index of ${path}`}/>
 			<div className='flex justify-between items-center mb-4'>
 				<h1>Index of {path}</h1>
 				{data.username ? (
