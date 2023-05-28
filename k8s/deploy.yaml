@@ -26,7 +26,8 @@ spec:
         app: com.tale.daview
     spec:
       containers:
-        - image: tale.me/library/daview:latest
+        - image: us-east4-docker.pkg.dev/aarnavtale/library/daview:latest
+          imagePullPolicy: Always
           name: daview
           env:
             - name: HOST

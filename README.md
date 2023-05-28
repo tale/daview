@@ -7,7 +7,7 @@ It only supports connecting to a WebDAV backend and viewing the files. Additiona
 View a [Live Demo](https://files.tale.me) here.
 
 ## Configuration
-This project can be run using the `tale.me/library/daview` docker image.
+This project can be run using the `us-east4-docker.pkg.dev/aarnavtale/library/daview` docker image.
 Be sure to forward the appropriate ports for the container based on your configuration.
 When running the container, you may use the following environment variables:
 ```
